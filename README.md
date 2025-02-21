@@ -31,8 +31,8 @@ A Streamlit application that processes employee schedule images using the Haiku 
 
 1. Clone this repository:
 ```bash
-git clone <repository-url>
-cd patiImage
+git clone https://github.com/kingsmanrip/patiAppHaiku.git
+cd patiAppHaiku
 ```
 
 2. Install required dependencies:
@@ -40,10 +40,14 @@ cd patiImage
 pip install -r requirements.txt
 ```
 
-3. Create a `.env` file in the project root and add your Haiku API key:
-```
-HAIKU_API_KEY=your-api-key-here
-```
+3. Set up environment variables:
+   - Copy `.env.example` to a new file named `.env`:
+     ```bash
+     cp .env.example .env
+     ```
+   - Open `.env` and replace `your-api-key-here` with your actual Haiku API key
+   - Never commit the `.env` file to version control
+   - Keep your API key secure and private
 
 ## Usage
 
@@ -95,6 +99,14 @@ The app includes several safeguards:
 - requests==2.31.0
 - python-dotenv==1.0.0
 - pandas==2.2.0
+
+## Security Notes
+
+- Never commit your `.env` file to version control
+- Keep your API keys private and secure
+- Regularly rotate your API keys
+- Use environment variables for all sensitive data
+- The `.env` file is listed in `.gitignore` to prevent accidental commits
 
 ## Notes
 
